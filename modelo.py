@@ -29,21 +29,14 @@ df.values
 # Exibir as Colunas do DataFrame
 df.columns
 
-# Exibir DataFrame Ordenado
-df_sorted
+# Exibir DataFrame Ordenado pelos 30 primeiros Registros
+df.sort_values(by="UF_GRUPO_PESQUISA",ascending=False).head(30)
 
-# Exibir DataFrame Ordenado pelos 20 primeiros Registros
-df_sorted.head(20)
-
-# Exibir DataFrame Ordenado pelos 20 últimos Registros
-df_sorted.tail(20)
-
-#Ver se é crescente ou decrescente
-ascending = [True] #Crescente
-ascending = [False] #Decrescente
+# Exibir DataFrame Ordenado pelos 30 últimos Registros
+df.sort_values(by="UF_GRUPO_PESQUISA",ascending=False).tail(30)
 
 # Calcular e imprimir a média
-print(f"Média de {coluna}:", df[coluna].mean())
+df["ANO_FORMACAO"].mean()
 
 # Calcular e imprimir a mediana
-print(f"Mediana de {coluna}:", df[coluna].median())
+df["ANO_FORMACAO"].median()
