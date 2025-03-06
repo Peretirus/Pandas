@@ -41,3 +41,12 @@ df["ANO_FORMACAO"].mean()
 
 # Calcular e imprimir a mediana
 df["ANO_FORMACAO"].median()
+
+# Calcular a soma acumulada e adicionar como uma nova coluna
+df['cum_sum'] = df['QTD_ESTUDANTES_GRUPO'].cumsum()
+
+# Calcular o máximo acumulado e adicionar como uma nova coluna
+df['cum_max'] = df['QTD_ESTUDANTES_GRUPO'].cummax()
+
+# Imprimir as primeiras linhas para visualizar
+print(df[['QTD_ESTUDANTES_GRUPO', 'cum_sum', 'cum_max']].head())
