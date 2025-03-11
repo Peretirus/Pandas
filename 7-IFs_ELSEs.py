@@ -2,14 +2,14 @@
 room = "kit"
 area = 14.0
 
-# construção if-else para room
-if room == "kit" :
-print("olhando ao redor na cozinha.")
-else :
-print("olhando ao redor em outro lugar.")
-
-# construção if-else para area
-if area > 15 :
-print("lugar grande!")
+# Construção if-else para room
+if room == "kit":
+    print("Olhando ao redor na cozinha.")  # Corrigido indentação
 else:
-print("bem pequeno.")
+    print("Olhando ao redor em outro lugar.")
+
+# Construção if-else para area
+if area > 15:
+    print("Lugar grande!")  # Corrigido indentação
+else:
+    print("Bem pequeno.")
