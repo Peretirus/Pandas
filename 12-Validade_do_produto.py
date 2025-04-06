@@ -15,7 +15,7 @@ estoque = {
 }
 
 # Exibir a lista de produtos disponíveis
-print("📦 PRODUTOS DISPONÍVEIS 📦")
+print("PRODUTOS DISPONÍVEIS ")
 for produto, validade in estoque.items():
     print(f"- {produto} (Vence em {validade})")
 
@@ -32,16 +32,16 @@ if produto_escolhido in estoque:
             estoque[produto_escolhido] = nova_validade  # Atualiza a validade
             break
         except ValueError:
-            print("❌ Formato inválido! Digite no formato correto (YYYY-MM-DD).")
+            print(" Formato inválido! Digite no formato correto (YYYY-MM-DD).")
     
     # Verifica se o produto está vencido
     hoje = datetime.today().date()
     validade_atualizada = datetime.strptime(estoque[produto_escolhido], "%Y-%m-%d").date()
     
-    print("\n📢 STATUS DO PRODUTO 📢")
+    print("\nSTATUS DO PRODUTO 📢")
     if validade_atualizada < hoje:
-        print(f"⚠️ {produto_escolhido.upper()} ESTÁ VENCIDO! ❌ (Venceu em {validade_atualizada})")
+        print(f"{produto_escolhido.upper()} ESTÁ VENCIDO! (Venceu em {validade_atualizada})")
     else:
-        print(f"✅ {produto_escolhido} está bom para consumo até {validade_atualizada}.")
+        print(f"{produto_escolhido} está bom para consumo até {validade_atualizada}.")
 else:
-    print("❌ Produto não encontrado no estoque.")
+    print("Produto não encontrado no estoque.")
